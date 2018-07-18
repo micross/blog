@@ -7,4 +7,4 @@ comment: false
 mathjax: false
 ---
 
-test
+Micross的个人博客。

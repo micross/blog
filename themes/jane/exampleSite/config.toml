@@ -1,6 +1,5 @@
-baseURL = "https://micross.github.io/"
-title = "Micross"
-disableHugoGeneratorInject = true
+baseURL = "http://localhost:1313/"
+title = "Jane - A super concise theme for Hugo"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "jane"
@@ -20,12 +19,12 @@ PygmentsCodefencesGuessSyntax = true
 PygmentsOptions = "linenos=table"
 
 # language support # en / zh-cn / other... translations present in i18n/
-defaultContentLanguage = "zh-cn"           # Default language to use
-[languages.zh-cn]
-  languageCode = "cmn-Hans-CN"
+defaultContentLanguage = "en"           # Default language to use
+[languages.en]
+  languageCode = "en"
 
 [author]                  # essential                     # 必需
-  name = "micross"
+  name = "xianmin"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -33,38 +32,42 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "首页"
+  name = "Home"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "归档"
+  name = "Archives"
   weight = 20
   identifier = "archives"
   url = "/post/"
 [[menu.main]]
-  name = "标签"
+  name = "Tags"
   weight = 30
   identifier = "tags"
   url = "/tags/"
 [[menu.main]]
-  name = "分类"
+  name = "Categories"
   weight = 40
   identifier = "categories"
   url = "/categories/"
+[[menu.main]]
+  name = "external-link"
+  weight = 50
+  url = "https://gohugo.io"
 
 
 [params]
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
   # uglyURLs = true          # You must set true after use uglyURLs in site (above). because $.Site.UglyURLs can not import.
-  since = "2018"            # Site creation time          # 站点建立时间
-  homeFullContent = true   # if false, show post summaries on home page. Othewise show full content.
+  since = "2017"            # Site creation time          # 站点建立时间
+  homeFullContent = false   # if false, show post summaries on home page. Othewise show full content.
   rssFullContent = true     # if false, Rss feed instead of the summary
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "Micross"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["Micross", "go", "php"]
-  description = "Micross的个人博客."
+  logoTitle = "Jane"        # default: the title value    # 默认值: 上面设置的title值
+  keywords = ["Hugo", "theme","jane"]
+  description = "Hugo theme jane example site."
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
   archive-paginate = 3
@@ -80,7 +83,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   moreMeta = true
 
   # show language chooser in menu
-  showMenuLanguageChooser = false
+  showMenuLanguageChooser = true
 
   # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
   # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.
@@ -131,21 +134,34 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:micross@qq.com"
-    b-github = "https://github.com/micross"
+    a-email = "mailto:your@email.com"
+    b-stack-overflow = "http://localhost:1313"
+    c-twitter = "http://localhost:1313"
+    d-facebook = "http://localhost:1313"
+    e-linkedin = "http://localhost:1313"
+    f-google = "http://localhost:1313"
+    g-github = "http://localhost:1313"
+    h-weibo = "http://localhost:1313"
+    i-zhihu = "http://localhost:1313"
+    j-douban = "http://localhost:1313"
+    k-pocket = "http://localhost:1313"
+    l-tumblr = "http://localhost:1313"
+    m-instagram = "http://localhost:1313"
+    n-gitlab = "http://en.xianmin.org/hugo-theme-jane/"
+    o-goodreads = "http://en.xianmin.org/hugo-theme-jane/"
 
 # jsonfeed support
 # more information: https://github.com/xianmin/hugo-theme-jane/issues/23
 # to have json output it's necessary to uncomment this block of code and create a index.jsonfeed.json template, using hugo template specs
-  [outputs]
-    home = ["html", "jsonfeed","rss"]
-    page = ["html"]
-
-  [outputFormats]
-  [outputFormats.jsonfeed]
-    mediaType = "application/json"
-    baseName = "feed"
-    isPlainText = true
+# [outputs]
+#   home = ["html", "jsonfeed","rss"]
+#   page = ["html"]
+#
+# [outputFormats]
+# [outputFormats.jsonfeed]
+#   mediaType = "application/json"
+#   baseName = "feed"
+#   isPlainText = true
 
 
 # multilingual support example
